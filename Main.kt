@@ -25,13 +25,13 @@ fun main() {
                 }
 
                 try {
-                    parseExpression(input)
+                    calculator.parseExpression(input)
                 } catch (e: Exception) {
                     println(e.message)
                 }
             }
         }
-    } while (input[0] != "/exit")
+    } while (rawInput != "/exit")
 
     println("Bye!")
 }
