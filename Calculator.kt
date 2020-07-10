@@ -9,7 +9,9 @@ class Calculator {
     val latin = "[a-z]+".toRegex(RegexOption.IGNORE_CASE)
 
     fun saveVariable(expression: String) {
-        val elements = expression.split("\\s*=\\s*".toRegex())
+        val elements = expression.split("\\s*=\\s*".toRegex()).map {
+            it.replace("\\s".toRegex(), "")
+        }
 
         if (
                 elements.size == 2
